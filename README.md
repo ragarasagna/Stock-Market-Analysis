@@ -14,4 +14,4 @@ It involves real-time data streaming & analysis of Stock Market data with over 1
 ## Architechture Diagram
 ![image](https://github.com/ragarasagna/Stock-Market-Analysis/assets/51982703/20d4f14a-e9df-4120-8301-e2bbd410f225)
 
-[Inspiration from Darshil Parmar]
+Inspiration from Darshil Parmar
