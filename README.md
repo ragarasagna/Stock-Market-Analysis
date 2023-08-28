@@ -16,13 +16,32 @@ It involves real-time data streaming & analysis of Stock Market data with over 1
 
 
 ## Steps
-1. Create EC2 instance and connect ssh to terminal via CLI. Download apache kafka and make sure java is installed.
-2. Run kafka and zookeeper servers in separate terminal windows. Make sure to Run in public IP (edit settings).
-3. Create topic and Start producer and consumer in separate sessions. Here, make sure to put the Public IP of EC2 Instance:9092.
-4. Run Producer and Consumer python files to test connection and load data from CSV file to AWS.
-5. Create a new folder in S3 bucket to load stteaming data into it.
-6. In AWS Glue, create a crawler with appropriate IAM admin role and database. Run this crawler to update catalog.
-7. In AWS Athena, this new table should be reflected and SQL queries can be excecuted.
+1. Create EC2 Instance and SSH Connection:
+  *Launch an EC2 instance with your desired settings.
+  *Use the CLI to connect to the instance via SSH.
+  *Ensure that Java is installed on the instance.
+2.Install and Run Apache Kafka:
+  *Download and set up Apache Kafka on the EC2 instance.
+ *Run Kafka and Zookeeper servers in separate terminal windows.
+  *Configure Kafka to listen on a public IP (update settings as needed).
+3.Topic Creation and Producer/Consumer Setup:
+  *Create a Kafka topic using appropriate commands.
+  *Start Kafka producer and consumer in separate terminal sessions.
+  *Use the Public IP of the EC2 instance and port 9092 for Kafka connections.
+4.Test Connection and Data Loading:
+  *Run Python scripts for the producer and consumer to test the Kafka connection.
+  *Verify that data can be loaded from a CSV file to Kafka and consumed properly.
+5.Prepare S3 Bucket for Streaming Data:
+  *Create a new folder within your chosen S3 bucket to hold the streaming data.
+6.AWS Glue Crawler for Catalog Updating:
+  *Set up an appropriate IAM admin role for AWS Glue.
+  *Create an AWS Glue crawler to scan and catalog the data in your S3 bucket.
+  *Run the Glue crawler to ensure your data's metadata is updated in the Glue Data Catalog.
+7.AWS Athena for Querying:
+  *Open AWS Athena and verify that the newly cataloged table is reflected.
+  *Write and execute SQL queries to analyze the data directly from the Glue Data Catalog.
+
+
 
 
 
