@@ -17,29 +17,29 @@ It involves real-time data streaming & analysis of Stock Market data with over 1
 
 ## Steps
 1. Create EC2 Instance and SSH Connection:
-  *Launch an EC2 instance with your desired settings.
-  *Use the CLI to connect to the instance via SSH.
-  *Ensure that Java is installed on the instance.
+<ul><li>Launch an EC2 instance with your desired settings.</li>
+  <li>Use the CLI to connect to the instance via SSH.</li>
+  <li>Ensure that Java is installed on the instance.</li></ul>
 2.Install and Run Apache Kafka:
-  *Download and set up Apache Kafka on the EC2 instance.
- *Run Kafka and Zookeeper servers in separate terminal windows.
-  *Configure Kafka to listen on a public IP (update settings as needed).
+  <ul><li>Download and set up Apache Kafka on the EC2 instance.</li>
+ <li>Run Kafka and Zookeeper servers in separate terminal windows.</li>
+  <li>Configure Kafka to listen on a public IP (update settings as needed).</li></ul>
 3.Topic Creation and Producer/Consumer Setup:
-  *Create a Kafka topic using appropriate commands.
-  *Start Kafka producer and consumer in separate terminal sessions.
-  *Use the Public IP of the EC2 instance and port 9092 for Kafka connections.
+  <ul><li>Create a Kafka topic using appropriate commands.</li>
+  <li>Start Kafka producer and consumer in separate terminal sessions.</li>
+  <li>Use the Public IP of the EC2 instance and port 9092 for Kafka connections.</li></ul>
 4.Test Connection and Data Loading:
-  *Run Python scripts for the producer and consumer to test the Kafka connection.
-  *Verify that data can be loaded from a CSV file to Kafka and consumed properly.
+  <ul><li>Run Python scripts for the producer and consumer to test the Kafka connection.</li>
+  <li>Verify that data can be loaded from a CSV file to Kafka and consumed properly.</li></ul>
 5.Prepare S3 Bucket for Streaming Data:
-  *Create a new folder within your chosen S3 bucket to hold the streaming data.
+  <ul><li>Create a new folder within your chosen S3 bucket to hold the streaming data.</li></ul>
 6.AWS Glue Crawler for Catalog Updating:
-  *Set up an appropriate IAM admin role for AWS Glue.
-  *Create an AWS Glue crawler to scan and catalog the data in your S3 bucket.
-  *Run the Glue crawler to ensure your data's metadata is updated in the Glue Data Catalog.
+  <ul><li>Set up an appropriate IAM admin role for AWS Glue.</li>
+  <li>Create an AWS Glue crawler to scan and catalog the data in your S3 bucket.</li>
+  <li>Run the Glue crawler to ensure your data's metadata is updated in the Glue Data Catalog.</li></ul>
 7.AWS Athena for Querying:
-  *Open AWS Athena and verify that the newly cataloged table is reflected.
-  *Write and execute SQL queries to analyze the data directly from the Glue Data Catalog.
+  <ul><li>Open AWS Athena and verify that the newly cataloged table is reflected.</li>
+  <li>Write and execute SQL queries to analyze the data directly from the Glue Data Catalog.</li></ul>
 
 
 
